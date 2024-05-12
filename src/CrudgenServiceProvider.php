@@ -22,6 +22,8 @@ class CrudgenServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+       // $this->loadViewsFrom(__DIR__.'/../views', 'quickadmin');
+        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
         //publish config file
         $this->publishes([__DIR__.'/../config/crudgen.php' => config_path('crudgen.php')]);
 
